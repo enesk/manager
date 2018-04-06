@@ -1,0 +1,8 @@
+body {
+  font-weight: 300;
+}
+
+body #organization-box #stepContent3 table tr td {
+  border: 0;
+}
+
