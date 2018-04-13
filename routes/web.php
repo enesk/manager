@@ -22,4 +22,9 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('edit', 'OrganizationsController@edit')->name('organization.billing');
     });
 
+    Route::group(['prefix' => '/members/'], function () {
+        Route::post('update', 'MembersController@update')->name('members.update');
+        Route::get('', 'MembersController@index')->name('members.index');
+    });
+
 });

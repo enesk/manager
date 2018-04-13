@@ -41,6 +41,9 @@ class OrganizationsController extends Controller
         $organization = Organization::create($data);
         $organization->user_id = Auth::user()->id;
         $organization->save();
+        $user = Auth::user();
+        $user->organization_id = $organization->id;
+        $user->save();
 
         return redirect()->back();
     }

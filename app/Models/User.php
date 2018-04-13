@@ -15,7 +15,7 @@ class User extends \TCG\Voyager\Models\User
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'organization_id'
     ];
 
     /**
@@ -28,14 +28,14 @@ class User extends \TCG\Voyager\Models\User
     ];
 
     public function profile() {
-        return User::hasOne(UsersProfile::class);
+        return self::hasOne(UsersProfile::class);
     }
 
     public function billingDetails() {
-        return User::hasOne(UsersBillingDetail::class);
+        return self::hasOne(UsersBillingDetail::class);
     }
 
     public function organization() {
-        return User::hasOne(Organization::class);
+        return self::hasOne(Organization::class);
     }
 }

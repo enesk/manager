@@ -6,15 +6,12 @@
             <div class="tablos">
                 <div class="row mb-xl-2 mb-xxl-3">
                     <div class="col-sm-6">
-                        <a class="element-box el-tablo centered trend-in-corner padded bold-label" href="apps_support_index.html">
+                        <a class="element-box el-tablo centered trend-in-corner padded bold-label" href="{{ route('members.index') }}">
                             <div class="value">
                                 {{ count($user->organization->members) }}
                             </div>
                             <div class="label">
                                 Mitglieder
-                            </div>
-                            <div class="trending trending-up-basic">
-                                <span>12%</span><i class="os-icon os-icon-arrow-up2"></i>
                             </div>
                         </a>
                     </div>
